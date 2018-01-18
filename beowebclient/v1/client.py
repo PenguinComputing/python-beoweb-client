@@ -167,7 +167,7 @@ class BeowebClient(HTTPClient):
                 "auth_token": authclient.token}
         try:
             resp = self.request("cloud_auth/login", "POST", data=data)
-        except requests.exceptions.HTTPError:
+        except requests.exceptions.HTTPError as e:
             LOG.error("HTTP Error from beoweb: %s", e)
             raise beowebexc.BeowebAPIError(
                 "HTTP Error received from Beoweb host")
