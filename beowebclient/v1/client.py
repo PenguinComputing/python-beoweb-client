@@ -371,6 +371,10 @@ class BeowebClient(HTTPClient):
             LOG.error("HTTP Error from beoweb: %s", e)
             raise beowebexc.BeowebAPIError(
                 "HTTP Error received from Beoweb host")
+        except beowebexc.BeowebSessionError:
+            # rewind the file if we will be retrying after authentication
+            files['jobscript'][1].seek(0)
+            raise
 
         results = json.loads(resp.text)
         if not results['success']:
