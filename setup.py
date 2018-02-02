@@ -1,4 +1,3 @@
-import os
 import sys
 
 from setuptools import setup, find_packages
@@ -6,7 +5,7 @@ from setuptools import setup, find_packages
 requires = [
     'requests',
     'python-cloud-auth-client == 0.1.1'
-    ]
+]
 
 pyversion = sys.version_info[:2]
 if pyversion < (2, 6):
@@ -14,7 +13,7 @@ if pyversion < (2, 6):
 
 setup(
     name="python-beoweb-client",
-    version="0.1",
+    version="0.1.1",
     description="Client library for Scyld Beoweb API",
     classifiers=[
         "Programming Language :: Python",
@@ -26,7 +25,7 @@ setup(
     maintainer="Penguin Computing, Inc.",
     maintainer_email="support@penguincomputing.com",
     url="http://www.penguincomputing.com",
-    packages=find_packages(exclude=['tests','tests.*']),
+    packages=find_packages(exclude=['tests', 'tests.*']),
     install_requires=requires,
-    dependency_links = ['https://github.com/PenguinComputing/python-cloud-auth-client/archive/v0.1.1.tar.gz#egg=python_cloud_auth_client-0.1.1']
+    dependency_links=['https://github.com/PenguinComputing/python-cloud-auth-client/archive/v0.1.1.tar.gz#egg=python_cloud_auth_client-0.1.1']
 )
