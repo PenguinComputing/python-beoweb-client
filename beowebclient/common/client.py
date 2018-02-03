@@ -46,7 +46,7 @@ class HTTPClient(object):
                 for param in kwargs:
                     LOG.debug("DEBUG %s, %s=%s", method, param, kwargs[param])
                 del kwargs['debug']
-            resp = self.client.request(method, fullurl, verify=False, **kwargs)
+            resp = self.client.request(method, fullurl, **kwargs)
         except requests.exceptions.ConnectionError:
             LOG.error("Unable to connect to %s", self.endpoint, exc_info=True)
             raise beowebexc.BeowebConnectError(
