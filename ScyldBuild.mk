@@ -15,7 +15,7 @@ python-beoweb-client_TARGETS += $(call add_targets,python-beoweb-client)
 BUILD_TARGETS += $(python-beoweb-client_TARGETS)
 python-beoweb-client_INSTALL_RPMS := $(call install_some_rpms,python-beoweb-client,'debuginfo')
 
-scyld-python-beoweb-client_VERSION := 0.1
+scyld-python-beoweb-client_VERSION := 0.1.2
 
 $(RPM_SOURCE_DIR)/python-beoweb-client-$(scyld-python-beoweb-client_VERSION).tar.gz: $(shell find python-beoweb-client -print -type f)
 	( cd python-beoweb-client ; tar zcf $@ *)

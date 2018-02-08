@@ -1,7 +1,7 @@
 %define build_number %([ -e /build/.scyld-build-number ] && cat /build/.scyld-build-number || echo `date +"%y%m%d.%H.%M"`)
 
 %define name 			python-beoweb-client
-%define version 		0.1
+%define version 		0.1.2
 %define scyld_python_prefix     /opt/scyld/python/2.6.5
 %define scyld_python_site_packages %{scyld_python_prefix}/lib/python2.6/site-packages
 
@@ -54,6 +54,11 @@ fi
 pip install -r %{scyld_python_site_packages}/python_beoweb_client-%{version}-py2.6.egg-info/requires.txt
 
 %changelog
+* Thu Feb 08 2018 Aaron Kurtz <akurtz@penguincomputing.com>
+- Fix failure to authenticate on first login
+- Enforce HTTPS certificate verification on all requests
+- Bump to v0.1.2
+
 * Mon Oct 17 2016 Limin Gu <lgu@penguincomputing.com>
 - Packaging from github source
 
