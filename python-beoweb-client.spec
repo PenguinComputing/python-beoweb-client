@@ -11,7 +11,7 @@ Version: %{version}
 Release: %{build_number}
 Vendor: Penguin Computing, Inc.
 Packager: Penguin Computing Inc. <http://www.penguincomputing.com>
-License: (c) 2002-2016 Penguin Computing, Inc.
+License: (c) 2002-2018 Penguin Computing, Inc.
 Group: Development/Tools
 URL: http://www.penguincomputing.com
 Distribution: Scyld ClusterWare
